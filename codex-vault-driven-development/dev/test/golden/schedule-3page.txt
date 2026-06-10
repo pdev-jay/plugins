@@ -1,0 +1,30 @@
+═══════════════════════════════════════════════
+vdd-schedule
+  input pages: 3
+═══════════════════════════════════════════════
+
+▼ Precedence edges (FROM before TO):  2
+  auth/_state-contract  →  connection/connection   (emits_to auth:verified)
+  auth/_state-contract  →  connection/connection   (reacts_to auth:expired)
+  auth/auth  →  connection/connection   (emits_to auth:verified)
+  auth/auth  →  connection/connection   (intent_refs)
+  auth/auth  →  connection/connection   (reacts_to auth:expired)
+
+▼ Parallel batch schedule
+  Batch 1 (parallel, 2 pages):
+    - auth/_state-contract
+    - auth/auth
+  Batch 2 (sequential, 1 page):
+    - connection/connection
+
+▼ Machine block (for vdd-build)
+SCHEDULE_BATCH 1 auth/_state-contract auth/auth
+SCHEDULE_BATCH 2 connection/connection
+
+═══════════════════════════════════════════════
+Dispatch directive
+  batches:     2
+  max width:   2
+  → vdd-build: max width <3 — dispatch vdd-implementer sequentially in batch order
+    (parallelism does not pay off below 3); single _lint.sh after the final batch.
+═══════════════════════════════════════════════

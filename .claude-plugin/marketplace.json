@@ -1,0 +1,33 @@
+{
+  "name": "pdev-jay",
+  "owner": {
+    "name": "pdev-jay"
+  },
+  "description": "pdev-jay's Claude Code plugin catalog.",
+  "plugins": [
+    {
+      "name": "ratchet",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/ratchet"
+      },
+      "description": "Floor-first agentic coding workflow for Claude Code — machine-enforced gates (intent-before-code, verify-before-done) over an ephemeral task file. Context derived from code, not authored."
+    },
+    {
+      "name": "vault-driven-development",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/vault-driven-development-plugin"
+      },
+      "description": "Skills, agents, and hooks for Vault-Driven Development — a per-project descriptive Source-of-Truth pattern for Claude Code workflows."
+    },
+    {
+      "name": "flow-driven-development",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/flow-driven-development"
+      },
+      "description": "Flow-driven development for Claude Code — plan around the FLOW of what you change instead of guessing a single 'root'. Skill-centric: plan → build → review → done."
+    }
+  ]
+}

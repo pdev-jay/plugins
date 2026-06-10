@@ -1,0 +1,38 @@
+{
+  "name": "codex-vault-driven-development",
+  "version": "0.1.0+codex.20260527231928",
+  "description": "Codex adapter for Vault-Driven Development: vault-first skills and deterministic tooling for docs/vault source-of-truth workflows.",
+  "author": {
+    "name": "pdev-jay / Codex adapter"
+  },
+  "homepage": "https://github.com/pdev-jay/vault-driven-development-plugin",
+  "repository": "https://github.com/pdev-jay/vault-driven-development-plugin",
+  "license": "MIT",
+  "keywords": [
+    "vault",
+    "vdd",
+    "codex",
+    "documentation",
+    "architecture",
+    "source-of-truth",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Vault-Driven Development",
+    "shortDescription": "Vault-first development workflows for Codex.",
+    "longDescription": "Use docs/vault as the architectural Source of Truth before planning, implementing, reviewing, and wrapping code changes. This Codex adapter keeps the deterministic VDD shell tools and converts Claude agent orchestration into Codex skill and worker opt-in guidance.",
+    "developerName": "pdev-jay / Codex adapter",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Set up VDD in this project.",
+      "Plan this change with the vault first.",
+      "Review vault drift before wrapping up."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

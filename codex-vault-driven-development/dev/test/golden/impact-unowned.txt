@@ -1,0 +1,10 @@
+═══════════════════════════════════════════════
+vdd impact: src/nope/unowned.ts
+═══════════════════════════════════════════════
+
+▼ No vault page references this file.
+
+Hints:
+  - File may be untracked (no vault page owns it yet).
+  - If it should be vault-tracked, add to a layer page's code_refs.
+  - Spec-first nudge fires on Write of new code files in populated vaults.

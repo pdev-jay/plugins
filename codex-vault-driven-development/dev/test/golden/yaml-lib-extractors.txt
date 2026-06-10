@@ -1,0 +1,8 @@
+# reacts_to
+auth/_state-contract#auth:expired
+# intent_refs
+[[auth/auth]]
+# code_refs
+src/connection/socket.ts#SocketManager
+# status
+active

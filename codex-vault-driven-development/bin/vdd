@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# vdd — VDD command dispatcher (on PATH via the plugin's bin/; Codex adds
+# <plugin>/bin to PATH). Self-locates the plugin root via $0 → no env var, no
+# cache lookup, no per-project copy. `vdd <name> [args]` → scripts/<name>.sh
+# (accepts bare 'map' or 'vdd-map'); `vdd lint` → scripts/_lint.sh.
+set -uo pipefail
+_src="$0"; while [ -L "$_src" ]; do _t="$(readlink "$_src")"; case "$_t" in /*) _src="$_t";; *) _src="$(dirname "$_src")/$_t";; esac; done
+BIN_DIR="$(cd "$(dirname "$_src")" && pwd)"
+PLUGIN_ROOT="$(cd "$BIN_DIR/.." && pwd)"
+SCRIPTS="$PLUGIN_ROOT/scripts"
+[ $# -lt 1 ] && { echo "usage: vdd <map|blast|impact|plan|schedule|bootstrap|grasp-gate|lint> [args]" >&2; exit 1; }
+cmd="$1"; shift
+case "$cmd" in
+  lint) exec bash "$PLUGIN_ROOT/scripts/_lint.sh" "$@" ;;
+  *)
+    t="$SCRIPTS/${cmd}.sh"; [ -f "$t" ] || t="$SCRIPTS/vdd-${cmd}.sh"
+    [ -f "$t" ] || { echo "vdd: unknown command '$cmd' (looked for ${cmd}.sh / vdd-${cmd}.sh in $SCRIPTS)" >&2; exit 1; }
+    exec bash "$t" "$@" ;;
+esac

@@ -1,0 +1,24 @@
+═══════════════════════════════════════════════
+vdd-schedule
+  input pages: 2
+═══════════════════════════════════════════════
+
+▼ Precedence edges (FROM before TO):  2
+  a/a  →  b/b   (reacts_to a:ping)
+  b/b  →  a/a   (reacts_to b:pong)
+
+▼ Parallel batch schedule
+
+  ⚠ CYCLE — contract loop among these pages (cannot order; co-edit or break the loop):
+    - a/a
+    - b/b
+
+▼ Machine block (for vdd-build)
+SCHEDULE_CYCLE a/a b/b
+
+═══════════════════════════════════════════════
+Dispatch directive
+  batches:     0
+  max width:   0
+  → CYCLE present: resolve the contract loop (vdd-plan Mode C) before dispatch.
+═══════════════════════════════════════════════

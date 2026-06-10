@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════
+vdd-plan: diff: <REPO>/dev/test/fixtures/plan-delta/old  ↔  <REPO>/dev/test/fixtures/plan-delta/new
+  vault: docs/vault
+═══════════════════════════════════════════════
+
+▼ Contract changes per page
+
+  auth/_state-contract.md
+    broadcasts: + auth:locked
+    broadcasts: - auth:legacy
+
+
+▼ Affected pages by key (current reactors/emitters)
+
+  ▼ `auth:legacy` (broadcasts removed from auth/_state-contract.md)
+    - [[connection]]  (connection/connection.md)
+      TODO: remove `auth:legacy` from reacts_to or migrate to a replacement key
+      TODO: re-review § dependent logic in body (this signal is gone)
+      TODO: run vault-verifier after changes to validate consistency
+
+  ▼ `auth:locked` (broadcasts added to auth/_state-contract.md)
+    TODO: identify potential reactors — which layers should respond to this signal?
+    TODO: add `reacts_to: auth:locked` to identified reactor pages
+    TODO: update reactor matrix on the emitter page (auth/_state-contract.md)
+
+═══════════════════════════════════════════════
+Summary
+═══════════════════════════════════════════════
+  contract changes:  2
+  affected keys:     2
+  affected pages:    1
+  TODO items:        6
+
+Next:
+  1. note the change intent (why this contract change?)
+  2. pass output above + intent to the vault-planner subagent:
+       "prose-ify this plan via vault-planner. intent: <...>"
+  3. planner produces an actionable per-page plan
+  4. human applies the plan → batch-validate with vault-verifier
+═══════════════════════════════════════════════

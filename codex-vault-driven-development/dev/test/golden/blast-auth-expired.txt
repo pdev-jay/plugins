@@ -1,0 +1,27 @@
+═══════════════════════════════════════════════
+vdd blast: `auth:expired`
+  normalized key: `auth:expired`
+═══════════════════════════════════════════════
+
+▼ Direct emitters (broadcasts: auth:expired)
+  - [[_state-contract]]  (auth/_state-contract.md)
+  - [[auth]]  (auth/auth.md)
+
+▼ Direct reactors (reacts_to)
+  - [[connection]]  (connection/connection.md)
+
+▼ Indirect emitters: (none)
+
+▼ Layer impact summary
+  affected layers: 2
+    - auth
+    - connection
+
+▼ Total affected pages: 3
+
+═══════════════════════════════════════════════
+Next action candidates:
+  - review each reactor page (change impact)
+  - update state-contract page (emitter) first
+  - invoke vault-verifier to check affected pages for consistency
+═══════════════════════════════════════════════

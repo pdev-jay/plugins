@@ -1,0 +1,34 @@
+═══════════════════════════════════════════════
+vdd impact: src/connection/socket.ts
+═══════════════════════════════════════════════
+
+▼ Owning vault pages (1 layer(s))
+  - docs/vault/connection/connection.md
+
+▼ Intent-dependency closure (transitive intent_refs)
+  - docs/vault/auth/auth.md
+
+▼ Per-layer broadcasts
+  - connection: (none)
+
+▼ Layer impact summary
+  affected layers: 1
+    - connection
+
+▼ Read targets
+  Layer pages to Read before editing:
+    - docs/vault/connection/connection.md
+  + intent_refs closure (conventions here constrain the change — read too):
+    - docs/vault/auth/auth.md
+
+  Also Read _state-contract.md for layers with non-empty broadcasts:
+
+  For broadcast graph changes, also run vdd-blast.sh for each affected key.
+
+═══════════════════════════════════════════════
+Next action candidates:
+  - Read the un-read layer pages before editing src/connection/socket.ts
+  - For broadcast-emitting layers: also Read _state-contract.md
+  - For broadcast key impact (reactor pages):
+      vdd blast <key>
+═══════════════════════════════════════════════
