@@ -28,6 +28,14 @@
         "repo": "pdev-jay/flow-driven-development"
       },
       "description": "Flow-driven development for Claude Code — plan around the FLOW of what you change instead of guessing a single 'root'. Skill-centric: plan → build → review → done."
+    },
+    {
+      "name": "cidd",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/cidd-cc"
+      },
+      "description": "Collective-intelligence-driven development for Claude Code — each stage (explore/plan/build/review) takes a different orchestration shape based on oracle availability: explore=divergent generation+judge, plan=lens friction, build=generate-verify-repair, review=hard-oracle gate with advisory lenses."
     }
   ]
 }
