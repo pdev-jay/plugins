@@ -6,6 +6,14 @@
   "description": "pdev-jay's Claude Code plugin catalog.",
   "plugins": [
     {
+      "name": "jay-flow",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-flow"
+      },
+      "description": "jay-flow — lightweight plan→build→review→done loop for Claude Code. Conversational planning over a fixed check-axis list (no lens fan-out; the user is the friction source), implementation fanned out to a sonnet builder with oracle-green gates, judgment kept on the main (higher) model."
+    },
+    {
       "name": "ratchet",
       "source": {
         "source": "github",
