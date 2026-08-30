@@ -44,6 +44,14 @@
         "repo": "pdev-jay/cidd-cc"
       },
       "description": "Collective-intelligence-driven development for Claude Code — each stage (explore/plan/build/review) takes a different orchestration shape based on oracle availability: explore=divergent generation+judge, plan=lens friction, build=generate-verify-repair, review=hard-oracle gate with advisory lenses."
+    },
+    {
+      "name": "asciify",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/asciify"
+      },
+      "description": "asciify — validated architecture, workflow, sequence, data-flow and lifecycle diagrams as Unicode box-drawing text, written into the project's docs/ folder as Markdown. Geometry is checked on an integer grid, source citations and drill-down links are verified against the working tree, and the JSON IR is embedded in the document for lossless round-trip editing."
     }
   ]
 }
