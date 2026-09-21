@@ -52,6 +52,14 @@
         "repo": "pdev-jay/asciify"
       },
       "description": "asciify — validated architecture, workflow, sequence, data-flow and lifecycle diagrams as Unicode box-drawing text, written into the project's docs/ folder as Markdown. Geometry is checked on an integer grid, source citations and drill-down links are verified against the working tree, and the JSON IR is embedded in the document for lossless round-trip editing."
+    },
+    {
+      "name": "pit-stop",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/pit-stop"
+      },
+      "description": "pit-stop — a Stop-hook gate for Claude Code. Runs typecheck/lint/test deterministically when a turn ends and returns pass/fail only, never instructions. Repeated identical failures (normalized error signature) stop blocking and escalate to the human. A machine-parsable task graph in .pit-stop/progress.json is re-injected after context compaction via SessionStart."
     }
   ]
 }
