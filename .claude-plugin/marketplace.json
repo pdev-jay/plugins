@@ -60,6 +60,14 @@
         "repo": "pdev-jay/pit-stop"
       },
       "description": "pit-stop — a Stop-hook gate for Claude Code. Runs typecheck/lint/test deterministically when a turn ends and returns pass/fail only, never instructions. Repeated identical failures (normalized error signature) stop blocking and escalate to the human. A machine-parsable task graph in .pit-stop/progress.json is re-injected after context compaction via SessionStart."
+    },
+    {
+      "name": "jay-orchestrator",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-orchestrator"
+      },
+      "description": "jay-orchestrator — a local agent team for Claude Code. An interview skill turns a short request into an approved spec (codebase first, AskUserQuestion only for gaps the code can't answer); then architect/tester/worker/reviewer subagents run each task test-first on a dedicated branch. Hooks enforce role write boundaries, block destructive git, and gate worker completion on the oracle; the human approves the spec and decides the merge."
     }
   ]
 }

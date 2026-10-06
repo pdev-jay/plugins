@@ -18,3 +18,4 @@ pdev-jay의 Claude Code 플러그인 카탈로그(마켓플레이스). 플러그
 | `flow-driven-development` | [pdev-jay/flow-driven-development](https://github.com/pdev-jay/flow-driven-development) | 바꾸려는 것의 FLOW를 따라 계획하는 workflow. plan → build → review → done. |
 | `asciify` | [pdev-jay/asciify](https://github.com/pdev-jay/asciify) | 검증된 ASCII 다이어그램을 docs/ 폴더에 마크다운으로 저장. architecture / workflow / sequence / dataflow / lifecycle. |
 | `pit-stop` | [pdev-jay/pit-stop](https://github.com/pdev-jay/pit-stop) | 턴 종료 시점 게이트(typecheck/lint/test) + 동일 실패 반복 시 에스컬레이션. 압축 후 태스크 그래프 자동 복구. |
+| `jay-orchestrator` | [pdev-jay/jay-orchestrator](https://github.com/pdev-jay/jay-orchestrator) | 인터뷰로 spec을 확정하고 architect·tester·worker·reviewer 팀이 전용 브랜치에서 테스트 선행으로 task를 끝까지 진행. hook이 역할별 쓰기 경계와 오라클 게이트를 강제. |
