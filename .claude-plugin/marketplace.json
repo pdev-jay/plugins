@@ -68,6 +68,14 @@
         "repo": "pdev-jay/jay-orchestrator"
       },
       "description": "jay-orchestrator — a local agent team for Claude Code. An interview skill turns a short request into an approved spec (codebase first, AskUserQuestion only for gaps the code can't answer); then architect/tester/worker/reviewer subagents run each task test-first on a dedicated branch. Hooks enforce role write boundaries, block destructive git, and gate worker completion on the oracle; the human approves the spec and decides the merge."
+    },
+    {
+      "name": "jay-keel",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-keel"
+      },
+      "description": "jay-keel — intent → plan → implement → verify → report for Claude Code. A short request becomes a brief (code first, questions only for real gaps); the plan reviews structure rules on every change (boundary, ownership, flow, folders/files, branching) with generated, rule-checked diagrams; independent steps run in parallel worktrees; a fresh-context verifier records proof-command evidence, and hooks block edits without an approved plan and finishing without evidence."
     }
   ]
 }
