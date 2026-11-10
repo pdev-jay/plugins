@@ -76,6 +76,14 @@
         "repo": "pdev-jay/jay-keel"
       },
       "description": "jay-keel — intent → plan → implement → verify → report for Claude Code. A short request becomes a brief (code first, questions only for real gaps); the plan reviews structure rules on every change (boundary, ownership, flow, folders/files, branching) with generated, rule-checked diagrams; independent steps run in parallel worktrees; a fresh-context verifier records proof-command evidence, and hooks block edits without an approved plan and finishing without evidence."
+    },
+    {
+      "name": "jay-workflow",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-workflow"
+      },
+      "description": "jay-workflow — structure-first changes with few model turns, the successor of jay-keel. The plan is one tool call of data that the engine checks against the structure rules and draws as text; a Stop-hook gate runs the proofs and compares the diff with the plan (scope, dependencies, flags, skipped tests); a fresh-context verifier judges design before the code and behaviour after it; a receipt binds the proofs to a tree hash. State is per git work tree, so several repos run side by side. Band with auto approval, auto commit, and clear/compact after close; a learning loop turns repeated failures into path-scoped notes."
     }
   ]
 }
