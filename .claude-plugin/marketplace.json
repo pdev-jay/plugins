@@ -92,6 +92,14 @@
         "repo": "pdev-jay/jay-loop"
       },
       "description": "jay-loop — a tight in-turn loop for Kotlin and Swift. Every edit is checked on the spot against the structure rules (shared with jay-workflow) and existing contracts; loop_check runs the narrowest proofs in parallel plus mutants on the added lines and answers in the same turn. Only a change that needs it (new source file, changed signature, high-risk path, new cross-Feature dependency) takes the strict path: plan, design check, approval, behaviour check."
+    },
+    {
+      "name": "jay-atlas",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-atlas"
+      },
+      "description": "jay-atlas — keeps a project's structure by keeping its map. ARCHITECTURE.md is the one source: its atlas block says where code goes and what may use what. Every session reads it, the verify commands and a lexical structure check (Swift, Kotlin) run when a turn ends, a new kind of code adds one line to the map, existing lines cannot be rewritten without the user's words, copied code goes back, and a tidy list is worked off when it fills. No plan, no approval step, no reviewer."
     }
   ]
 }
