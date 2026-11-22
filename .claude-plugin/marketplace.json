@@ -100,6 +100,14 @@
         "repo": "pdev-jay/jay-atlas"
       },
       "description": "jay-atlas — keeps a project's structure by keeping its map. ARCHITECTURE.md is the one source: its atlas block says where code goes and what may use what. Every session reads it, the verify commands and a lexical structure check (Swift, Kotlin) run when a turn ends, a new kind of code adds one line to the map, existing lines cannot be rewritten without the user's words, copied code goes back, and a tidy list is worked off when it fills. No plan, no approval step, no reviewer."
+    },
+    {
+      "name": "jay-verify",
+      "source": {
+        "source": "github",
+        "repo": "pdev-jay/jay-verify"
+      },
+      "description": "jay-verify — a verification-centred loop for Claude Code. Setup turns the user's architecture (rules, guide, role table) and six principles into the project's ARCHITECTURE.md and REVIEW.md; a Stop hook runs the checks read from HEAD and, when REVIEW.md items match the diff, asks one fresh-context reviewer for item violations with file and line. Corrections and review results are recorded so learn can grow REVIEW.md, and candidate items are tried on real history before they are added."
     }
   ]
 }
